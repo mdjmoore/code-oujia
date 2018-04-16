@@ -3,10 +3,12 @@ h2, h5 {
 }
 
 .body {
+    font-family: 'Cinzel', serif;
     background: linear-gradient(purple, black);
 }
 
 .oujia-board {
+    position: relative;
     max-width:1100px;
     width:80%;
     margin:0 auto;
@@ -15,5 +17,69 @@ h2, h5 {
     background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
     padding-bottom:100px;
+}
+
+p {
+    font-weight: 900;
+}
+
+img {
+    position: absolute;
+    max-width: 200px;
+}
+
+.sun-top {
+    top:0;
+    left:0;
+    animation: rotate 7s ease 0.5s infinite;
+}
+
+.moon-top {
+    top:0;
+    right:0;
+    animation: rotate 7s ease infinite;
+}
+
+.sun-bottom {
+    bottom:0;
+    right:0;
+    animation: rotate 7s ease 0.9s infinite reverse;
+}
+
+.moon-bottom {
+    bottom:0;
+    left:0;
+    transform: rotate(180deg);
+    animation: rotate-reverse 7s ease 0.7s infinite reverse;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    33% {
+        transform: rotate(10deg) scale(1.1);
+    }
+    66% {
+        transform: rotate(-10deg) scale(0.95);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes rotate-reverse {
+    0% {
+        transform: rotate(180deg) scale(1);
+    }
+    33% {
+        transform: rotate(190deg) scale(1.1);
+    }
+    66% {
+        transform: rotate(170deg) scale(0.95);
+    }
+    100% {
+        transform: rotate(180deg) scale(1);
+    }
 }
 
